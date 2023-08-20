@@ -20,7 +20,7 @@ const initialStateLogIn = {
   password: "",
 };
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   let [fontsLoaded, fontError] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,
@@ -127,7 +127,9 @@ export default function LoginScreen() {
                 <TouchableOpacity style={styles.button} onPress={submitForm}>
                   <Text style={styles.buttonText}>Увійти</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("register")}
+                >
                   <Text style={styles.navText}>
                     Немає акаунту? Зареєструватись
                   </Text>
