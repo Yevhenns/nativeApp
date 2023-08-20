@@ -10,7 +10,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import SVGadd from "../Components/SVGadd";
+import SVGadd from "../../Components/SVGadd";
 import {
   useFonts,
   Roboto_400Regular,
