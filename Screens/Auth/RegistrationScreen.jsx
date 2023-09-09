@@ -6,16 +6,15 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
-  Image,
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import SVGadd from "../../Components/SVGadd";
 import {
   useFonts,
   Roboto_400Regular,
   Roboto_500Medium,
 } from "@expo-google-fonts/roboto";
+import User from "../../Components/User";
 
 const initialState = {
   login: "",
@@ -78,30 +77,7 @@ export default function RegistrationScreen({ navigation }) {
               paddingBottom: isKeyboardShown ? 32 : 80,
             }}
           >
-            <View
-              style={{
-                position: "absolute",
-                left: "50%",
-                top: -60,
-                transform: [{ translateX: -45 }],
-              }}
-            >
-              <View style={{ overflow: "hidden", borderRadius: 16 }}>
-                <Image
-                  style={{
-                    width: 120,
-                    height: 120,
-                    backgroundColor: "#F6F6F6",
-                  }}
-                  source={{ uri: "https://placehold.co/120x120" }}
-                />
-              </View>
-              <TouchableOpacity
-                style={{ position: "absolute", right: -15, bottom: 10 }}
-              >
-                <SVGadd />
-              </TouchableOpacity>
-            </View>
+            <User />
             <Text style={styles.heading}>Реєстрація</Text>
             <View style={styles.form}>
               <View
