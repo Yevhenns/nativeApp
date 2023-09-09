@@ -5,7 +5,6 @@ import {
   View,
   ImageBackground,
   TouchableOpacity,
-  TouchableWithoutFeedback,
 } from "react-native";
 import {
   useFonts,
@@ -26,22 +25,20 @@ export default function ProfileScreen() {
   }
 
   return (
-    <TouchableWithoutFeedback>
-      <View style={styles.wrapper}>
-        <ImageBackground
-          source={require("../../assets/PhotoBG.jpg")}
-          style={styles.image}
-        >
-          <View style={styles.container}>
-            <TouchableOpacity style={styles.logoutBtn}>
-              <MaterialIcons name="logout" size={24} color="black" />
-            </TouchableOpacity>
-            <User />
-            <Text style={styles.heading}>Борис Джонсонюк</Text>
-          </View>
-        </ImageBackground>
-      </View>
-    </TouchableWithoutFeedback>
+    <View style={styles.wrapper}>
+      <ImageBackground
+        source={require("../../assets/PhotoBG.jpg")}
+        style={styles.image}
+      >
+        <View style={styles.container}>
+          <TouchableOpacity style={styles.logoutBtn}>
+            <MaterialIcons name="logout" size={24} color="black" />
+          </TouchableOpacity>
+          <User />
+          <Text style={styles.heading}>Борис Джонсонюк</Text>
+        </View>
+      </ImageBackground>
+    </View>
   );
 }
 
