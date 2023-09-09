@@ -54,6 +54,7 @@ export default function LoginScreen({ navigation }) {
   const submitForm = () => {
     console.log(formState);
     setFormState(initialStateLogIn);
+    navigation.navigate("Home");
   };
 
   return (

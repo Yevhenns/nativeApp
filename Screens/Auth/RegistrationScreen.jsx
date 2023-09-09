@@ -62,6 +62,7 @@ export default function RegistrationScreen({ navigation }) {
   const submitForm = () => {
     console.log(formState);
     setFormState(initialState);
+    navigation.navigate("Home");
   };
 
   return (
