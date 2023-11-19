@@ -12,7 +12,13 @@ const Tab = createBottomTabNavigator();
 
 const Home = () => {
   return (
-    <Tab.Navigator screenOptions={{ tabBarShowLabel: false }}>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        style: { color: "red" },
+      }}
+      // style={styles.tabContainer}
+    >
       <Tab.Screen
         options={{
           headerShown: false,

@@ -14,7 +14,7 @@ import {
 import User from "../../Components/User";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }) {
   let [fontsLoaded, fontError] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,
@@ -24,6 +24,10 @@ export default function ProfileScreen() {
     return null;
   }
 
+  const logOut = () => {
+    navigation.navigate("register");
+  };
+
   return (
     <View style={styles.wrapper}>
       <ImageBackground
@@ -31,7 +35,7 @@ export default function ProfileScreen() {
         style={styles.image}
       >
         <View style={styles.container}>
-          <TouchableOpacity style={styles.logoutBtn}>
+          <TouchableOpacity style={styles.logoutBtn} onPress={logOut}>
             <MaterialIcons name="logout" size={24} color="black" />
           </TouchableOpacity>
           <User />

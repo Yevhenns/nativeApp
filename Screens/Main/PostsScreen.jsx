@@ -8,7 +8,7 @@ import {
 import { MaterialIcons } from "@expo/vector-icons";
 import UserInfo from "../../Components/UserInfo";
 
-export default function PostsScreen() {
+export default function PostsScreen({ navigation }) {
   let [fontsLoaded, fontError] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,
@@ -18,11 +18,15 @@ export default function PostsScreen() {
     return null;
   }
 
+  const logOut = () => {
+    navigation.navigate("register");
+  };
+
   return (
     <View style={styles.wrapper}>
       <View style={styles.header}>
         <Text style={styles.heading}>Публікації</Text>
-        <TouchableOpacity style={styles.logoutBtn}>
+        <TouchableOpacity style={styles.logoutBtn} onPress={logOut}>
           <MaterialIcons name="logout" size={24} color="black" />
         </TouchableOpacity>
       </View>
